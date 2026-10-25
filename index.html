@@ -5,8 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Docker</title>
 </head>
+
 <body>
-    <h1> ciao docker</h1>
-    
+
+    <h1>Ciao Docker!</h1>
+
+    <h2>Login</h2>
+
+    <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required>
+
+        <br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+
+        <br><br>
+
+        <button type="submit">Accedi</button>
+    </form>
+
+    <p id="messaggio"></p>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const username = document.getElementById("username").value;
+
+            document.getElementById("messaggio").textContent =
+                "Benvenuto " + username + "!";
+        });
+    </script>
+
 </body>
 </html>
